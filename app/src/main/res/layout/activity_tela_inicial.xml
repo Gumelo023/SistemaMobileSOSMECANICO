@@ -51,24 +51,31 @@
       app:layout_constraintTop_toTopOf="@id/retangulo" />
 
   <ViewFlipper
-      android:layout_width="match_parent"
-      android:layout_height="250dp"
+      android:layout_width="wrap_content"
+      android:layout_height="200dp"
       android:autoStart="true"
       android:flipInterval="2000"
       android:inAnimation="@android:anim/slide_in_left"
       android:outAnimation="@android:anim/slide_out_right"
+      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.5"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
+      android:layout_marginTop="10dp"
       app:layout_constraintVertical_bias="0.5">
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@tools:sample/avatars" />
+        app:srcCompat="@drawable/homemmecanico" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/mulhermecanica" />
   </ViewFlipper>
 
 
