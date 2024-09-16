@@ -7,7 +7,37 @@
     android:background="@color/black"
     tools:context=".CatalogoMecanicos">
 
+    <View
+        android:id="@+id/retangulocatalogo"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/retangulo_catalogo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iconeretangulocaatalogo"
+        android:layout_width="30dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:src="@drawable/baseline_personbranco"
+        app:layout_constraintStart_toStartOf="@id/retangulocatalogo"
+        app:layout_constraintTop_toTopOf="@id/retangulocatalogo" />
+
+    <TextView
+        android:id="@+id/textNomeRetangulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Fawensley"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/retangulocatalogo"
+        app:layout_constraintStart_toEndOf="@id/iconeretangulocaatalogo"
+        app:layout_constraintTop_toTopOf="@id/retangulocatalogo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
