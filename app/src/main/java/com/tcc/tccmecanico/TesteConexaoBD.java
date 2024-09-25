@@ -3,26 +3,21 @@ package com.tcc.tccmecanico;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.widget.TextView;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-public class Teste_Banco extends AppCompatActivity {
 
 
 
+public class TesteConexaoBD extends AppCompatActivity {
 
     TextView BancoTeste;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teste_banco);
-
-        Connection conn = Conexao.conectar(Teste_Banco;Teste_Banco.this);
+        setContentView(R.layout.activity_teste_conexao_bd);
+        Connection conn = Conexao.conectar();
         BancoTeste = findViewById(R.id.BancoTeste);
 
         try {

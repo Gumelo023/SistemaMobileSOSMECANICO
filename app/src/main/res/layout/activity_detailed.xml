@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailedActivity"
+    android:background="@color/black"
     android:orientation="vertical">
 
 
@@ -16,11 +17,11 @@
         android:layout_marginTop="14dp"
         android:text="Recipe Name"
         android:textSize="24sp"
-        android:textColor="@color/lavender"
+        android:textColor="@color/orange"
         android:textStyle="bold"
         android:layout_gravity="center"/>
     <androidx.cardview.widget.CardView
-        android:layout_width="380dp"
+        android:layout_width="350dp"
         android:layout_height="200dp"
         android:id="@+id/cardImage"
         android:layout_marginTop="10dp"
@@ -28,7 +29,7 @@
         app:cardCornerRadius="20dp"
         app:cardElevation="8dp">
         <ImageView
-            android:layout_width="380dp"
+            android:layout_width="350dp"
             android:layout_height="200dp"
             android:id="@+id/detailImage"
             android:layout_marginTop="10dp"
@@ -39,8 +40,8 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Duration:"
-        android:textColor="@color/lavender"
+        android:text="Local:"
+        android:textColor="@color/orange"
         android:textStyle="bold"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
@@ -48,15 +49,16 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="time"
+        android:text="cidade"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:textSize="16sp"
         android:id="@+id/detailTime"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ingredients:"
-        android:textColor="@color/lavender"
+        android:text="Descrição:"
+        android:textColor="@color/orange"
         android:textStyle="bold"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -66,13 +68,14 @@
         android:layout_height="wrap_content"
         android:text="@string/maggiIngredients"
         android:layout_marginStart="10dp"
+        android:textColor="@color/white"
         android:textSize="16sp"
         android:id="@+id/detailIngredients"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Steps:"
-        android:textColor="@color/lavender"
+        android:text="Telefone:"
+        android:textColor="@color/orange"
         android:textStyle="bold"
         android:layout_marginStart="10dp"
         android:layout_marginTop="20dp"
@@ -83,6 +86,7 @@
         android:text="@string/maggieDesc"
         android:layout_marginStart="10dp"
         android:textSize="16sp"
+        android:textColor="@color/white"
         android:id="@+id/detailDesc"/>
 
 </LinearLayout>

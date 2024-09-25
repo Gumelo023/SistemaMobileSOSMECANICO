@@ -23,10 +23,10 @@ public class ListAdapter extends ArrayAdapter<ListData> {
         }
         ImageView listImage = view.findViewById(R.id.listImage);
         TextView listName = view.findViewById(R.id.listName);
-        TextView listTime = view.findViewById(R.id.listTime);
+        TextView listLocal = view.findViewById(R.id.listLocal);
         listImage.setImageResource(listData.image);
         listName.setText(listData.name);
-        listTime.setText(listData.time);
+        listLocal.setText(listData.time);
         return view;
     }
 }

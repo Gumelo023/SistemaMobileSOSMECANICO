@@ -20,12 +20,12 @@ public class DetailedActivity extends AppCompatActivity {
         Intent intent = this.getIntent();
         if (intent != null){
             String name = intent.getStringExtra("name");
-            String time = intent.getStringExtra("time");
+            String local = intent.getStringExtra("local");
             int ingredients = intent.getIntExtra("ingredients", R.string.maggiIngredients);
             int desc = intent.getIntExtra("desc", R.string.maggieDesc);
             int image = intent.getIntExtra("image", R.drawable.maggi);
             binding.detailName.setText(name);
-            binding.detailTime.setText(time);
+            binding.detailTime.setText(local);
             binding.detailDesc.setText(desc);
             binding.detailIngredients.setText(ingredients);
             binding.detailImage.setImageResource(image);

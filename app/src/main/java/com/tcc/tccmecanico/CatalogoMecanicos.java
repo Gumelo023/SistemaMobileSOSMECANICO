@@ -26,14 +26,14 @@ public class CatalogoMecanicos extends AppCompatActivity {
         binding = ActivityCatalogoMecanicosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        int[] imageList = {R.drawable.pasta, R.drawable.maggi, R.drawable.cake, R.drawable.pancake, R.drawable.pizza, R.drawable.burger, R.drawable.fries};
+        int[] imageList = {R.drawable.baseline_personbranco, R.drawable.maggi, R.drawable.cake, R.drawable.pancake, R.drawable.pizza, R.drawable.burger, R.drawable.fries};
         int[] ingredientList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.friesIngredients};
         int[] descList = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
-        String[] nameList = {"Pasta", "Maggi", "Cake", "Pancake", "Pizza","Burgers", "Fries"};
-        String[] timeList = {"30 mins", "2 mins", "45 mins","10 mins", "60 mins", "45 mins", "30 mins"};
+        String[] nameList = {"Gustavo Melo", "Matheus Santos", "Fawensley Charite", "Joao Paulo", "Robson Alex","Guilherme Xavier", "Luan Santos"};
+        String[] localList= {"Barueri", "Osasco", "Carapicuiba","Jandira", "Itapevi", "Sorocaba", "Osasco"};
 
         for (int i = 0; i < imageList.length; i++){
-            listData = new ListData(nameList[i], timeList[i], ingredientList[i], descList[i], imageList[i]);
+            listData = new ListData(nameList[i], localList[i], ingredientList[i], descList[i], imageList[i]);
             dataArrayList.add(listData);
         }
 
@@ -45,7 +45,7 @@ public class CatalogoMecanicos extends AppCompatActivity {
             public void onItemClick (AdapterView<?> AdapterView, View View, int i, long l) {
                 Intent intent = new Intent(CatalogoMecanicos.this, DetailedActivity.class);
                 intent.putExtra("name", nameList[i]);
-                intent.putExtra("time", timeList[i]);
+                intent.putExtra("local", localList[i]);
                 intent.putExtra("ingredients", ingredientList[i]);
                 intent.putExtra("desc", descList[i]);
                 intent.putExtra("image", imageList[i]);

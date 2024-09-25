@@ -16,6 +16,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".TesteConexaoBD"
+            android:exported="false" />
+        <activity
             android:name=".Teste_Banco"
             android:exported="false" />
         <activity

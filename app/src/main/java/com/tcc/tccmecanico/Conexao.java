@@ -11,20 +11,21 @@ public class Conexao {
     public static Connection conectar() {
         Connection conn = null;
         try {
-            StrictMode.ThreadPolicy política;
-            política = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-            StrictMode.setThreadPolicy(política);
+            StrictMode.ThreadPolicy politica;
+            politica = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+            StrictMode.setThreadPolicy(politica);
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.183" +
-                    "databaseName=bd_sosmecanico;user=sa;password=@ITB123456@");
+                    "databaseName=bd_sosmecanico;user=sa;password=@ITB123456");
 
-        } catch (SQLException e) {
+        } catch (SQLException e){
             e.getMessage();
 
-        } catch (ClassNotFoundException e) {
+        } catch (ClassNotFoundException e){
             e.printStackTrace();
 
         }
         return conn;
 
+}
 }
