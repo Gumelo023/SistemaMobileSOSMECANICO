@@ -29,14 +29,13 @@
         android:id="@+id/textNomeRetangulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="90dp"
-        android:layout_marginRight="10dp"
         android:text="SOS MECÂNICO"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/retangulocatalogo"
-        app:layout_constraintStart_toEndOf="@id/iconeretangulocaatalogo"
+        app:layout_constraintEnd_toEndOf="@+id/retangulocatalogo"
+        app:layout_constraintStart_toStartOf="@+id/retangulocatalogo"
         app:layout_constraintTop_toTopOf="@id/retangulocatalogo" />
 
     <ListView

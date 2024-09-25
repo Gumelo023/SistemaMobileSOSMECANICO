@@ -8,7 +8,7 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    public static Connection conectar() {
+    public static Connection conectar(TesteConexaoBD testeConexaoBD) {
         Connection conn = null;
         try {
             StrictMode.ThreadPolicy politica;
