@@ -19,13 +19,13 @@
             android:name=".TesteConexaoBD"
             android:exported="false" />
         <activity
-            android:name=".Teste_Banco"
-            android:exported="false" />
-        <activity
             android:name=".DetailedActivity"
             android:exported="false" />
         <activity
             android:name=".List_Item"
+            android:exported="false" />
+        <activity
+            android:name=".Conexao"
             android:exported="false" />
         <activity
             android:name=".Tela_Inicial"
