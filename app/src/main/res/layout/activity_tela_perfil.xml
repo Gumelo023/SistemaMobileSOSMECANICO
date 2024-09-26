@@ -23,10 +23,10 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/baseline_person_24"
+        app:layout_constraintBottom_toBottomOf="@+id/containerFoto"
+        app:layout_constraintEnd_toEndOf="@+id/containerFoto"
         app:layout_constraintStart_toStartOf="@id/containerFoto"
-        app:layout_constraintEnd_toEndOf="@id/containerFoto"
-        app:layout_constraintTop_toTopOf="@id/containerFoto"
-        app:layout_constraintBottom_toBottomOf="@id/containerFoto" />
+        app:layout_constraintTop_toTopOf="@id/containerFoto" />
 
     <ImageView
         android:id="@+id/iconeUser"

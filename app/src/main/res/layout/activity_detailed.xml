@@ -33,7 +33,6 @@
             android:layout_width="350dp"
             android:layout_height="200dp"
             android:id="@+id/detailImage"
-            android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:src="@drawable/maggi"
             android:scaleType="centerCrop"/>

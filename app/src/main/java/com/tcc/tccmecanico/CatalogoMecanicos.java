@@ -26,7 +26,7 @@ public class CatalogoMecanicos extends AppCompatActivity {
         binding = ActivityCatalogoMecanicosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        int[] imageList = {R.drawable.baseline_personbranco, R.drawable.maggi, R.drawable.cake, R.drawable.pancake, R.drawable.pizza, R.drawable.burger, R.drawable.fries};
+        int[] imageList = {R.drawable.foto_gustavo, R.drawable.foto_matheus, R.drawable.foto_faw, R.drawable.foto_joao, R.drawable.foto_robson, R.drawable.foto_xavier, R.drawable.foto_luan};
         int[] ingredientList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.friesIngredients};
         int[] descList = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
         String[] nameList = {"Gustavo Melo", "Matheus Santos", "Fawensley Charite", "Joao Paulo", "Robson Alex","Guilherme Xavier", "Luan Santos"};
