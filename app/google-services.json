@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "329747805746",
+    "project_id": "tcc-mecanico",
+    "storage_bucket": "tcc-mecanico.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329747805746:android:93d7c8c5e5c80d66fbae2b",
+        "android_client_info": {
+          "package_name": "com.tcc.tccmecanico"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqGmZQ4EQ6KsBDxwQrXZnUAtEtvMCSsI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,7 +5,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">280dp</item>
         <item name="android:background">@drawable/container_components</item>
-        <item name="android:layout_margin">30dp</item>
+        <item name="android:layout_margin">20dp</item>
     </style>
 
     <style name="Edit_Text">
@@ -14,9 +14,9 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@drawable/edit_text</item>
         <item name="android:padding">15dp</item>
-        <item name="android:layout_marginLeft">40dp</item>
-        <item name="android:layout_marginRight">40dp</item>
-        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginLeft">30dp</item>
+        <item name="android:layout_marginRight">30dp</item>
+        <item name="android:layout_marginTop">35dp</item>
     </style>
 
     <style name="Edit_TextCad">

@@ -1,3 +1,5 @@
+import org.gradle.internal.impldep.org.apache.maven.settings.Repository
+
 pluginManagement {
     repositories {
         google()
@@ -12,6 +14,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 
 rootProject.name = "TCC MECANICO"
 include(":app")
