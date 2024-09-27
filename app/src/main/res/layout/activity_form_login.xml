@@ -6,30 +6,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FormLogin"
-    android:background="@drawable/tela_cadastro">
+    android:background="@color/white">
 
     <ImageView
         android:id="@+id/logo"
         android:layout_marginTop="20dp"
-        android:layout_width="250dp"
+        android:layout_width="280dp"
         android:layout_height="200dp"
-        android:background="@drawable/logo_larga"
+        android:background="@drawable/logo_preta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <LinearLayout
-        android:layout_margin="30dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/edit_text"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/logo">
 
@@ -39,7 +40,7 @@
             android:layout_height="wrap_content"
             android:text="Login"
             android:textAlignment="center"
-            android:textColor="@color/lavender"
+            android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
 
@@ -47,9 +48,9 @@
             android:id="@+id/login_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:background="@drawable/edit_text"
-            android:drawableLeft="@drawable/baseline_personbranco"
+            android:drawableLeft="@drawable/baseline_person_24"
             android:drawablePadding="8dp"
             android:hint="Email"
             android:padding="8dp"
@@ -73,9 +74,9 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
-            android:backgroundTint="@color/lavender"
+            android:backgroundTint="@color/orange"
             android:text="Login"
-            android:textSize="18sp"
+            android:textSize="20sp"
             app:cornerRadius="20dp" />
 
         <TextView
@@ -85,7 +86,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:padding="8dp"
-            android:text="Forgot Password?"
+            android:text="Esqueceu a Senha ?"
             android:textColor="@color/lavender"
             android:textSize="16sp" />
 
@@ -95,24 +96,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:padding="8dp"
-            android:text="Not yet registered? Sign Up"
+            android:text="Registre-se Aqui"
             android:textAlignment="center"
             android:textColor="@color/lavender"
             android:textSize="18sp" />
+
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/progressbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

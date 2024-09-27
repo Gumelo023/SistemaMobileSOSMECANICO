@@ -56,22 +56,22 @@ public class FormLogin extends AppCompatActivity {
                                   @Override
                                   public void onSuccess(AuthResult authResult) {
                                       Toast.makeText(FormLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                      startActivity(new Intent(FormLogin.this,MainActivity.class));
+                                      startActivity(new Intent(FormLogin.this,Tela_Inicial.class));
                                       finish();
                                   }
                               }).addOnFailureListener(new OnFailureListener() {
                                   @Override
                                   public void onFailure(@NonNull Exception e) {
-                                      Toast.makeText(FormLogin.this, "Login Faileed", Toast.LENGTH_SHORT).show();
+                                      Toast.makeText(FormLogin.this, "Login Falhou", Toast.LENGTH_SHORT).show();
                                   }
                               });
                   } else {
                       loginPassword.setError("Paassword cannot be empty");
                   }
                 } else if (email.isEmpty()){
-                    loginEmail.setError("Email cannot be empty");
+                    loginEmail.setError("Email não pode estar vazio");
                 } else {
-                    loginEmail.setError("Please enter valid email");
+                    loginEmail.setError("Coloque um email valido");
                 }
             }
         });
