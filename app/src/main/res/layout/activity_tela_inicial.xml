@@ -10,6 +10,7 @@
 
   <View
       android:id="@+id/retangulo"
+      android:layout_marginTop="5dp"
       android:layout_width="150dp"
       android:layout_height="45dp"
       android:background="@drawable/retangulo"
@@ -22,7 +23,7 @@
       android:layout_width="30dp"
       android:layout_height="45dp"
       android:layout_marginStart="8dp"
-      android:src="@drawable/baseline_personbranco"
+      android:src="@drawable/baseline_person_24"
       app:layout_constraintStart_toStartOf="@id/retangulo"
       app:layout_constraintTop_toTopOf="@id/retangulo" />
 
@@ -33,7 +34,7 @@
       android:layout_marginLeft="10dp"
       android:layout_marginRight="10dp"
       android:text="Fawensley"
-      android:textColor="@color/white"
+      android:textColor="@color/black"
       android:textSize="17sp"
       android:textStyle="bold"
       app:layout_constraintBottom_toBottomOf="@id/retangulo"
