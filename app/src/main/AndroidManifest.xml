@@ -16,11 +16,20 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
+            android:name=".MenuLateral"
+            android:exported="false" />
+        <activity
             android:name=".FormLogin"
             android:exported="false" />
         <activity
             android:name=".TesteConexaoBD"
-            android:exported="false" />
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
@@ -50,13 +59,7 @@
             android:exported="false" />
         <activity
             android:name=".CustomToolbaar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>
