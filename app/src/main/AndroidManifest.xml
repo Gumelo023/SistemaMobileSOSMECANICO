@@ -20,7 +20,13 @@
             android:exported="false" />
         <activity
             android:name=".TesteConexaoBD"
-            android:exported="false" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".DetailedActivity"
             android:exported="false" />
@@ -50,13 +56,8 @@
             android:exported="false" />
         <activity
             android:name=".CustomToolbaar"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:exported="true"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
