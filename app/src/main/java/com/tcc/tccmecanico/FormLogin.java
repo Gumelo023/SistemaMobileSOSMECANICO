@@ -56,7 +56,7 @@ public class FormLogin extends AppCompatActivity {
                                   @Override
                                   public void onSuccess(AuthResult authResult) {
                                       Toast.makeText(FormLogin.this, "Login Successful", Toast.LENGTH_SHORT).show();
-                                      startActivity(new Intent(FormLogin.this,Tela_Inicial.class));
+                                      startActivity(new Intent(FormLogin.this,MenuLateral.class));
                                       finish();
                                   }
                               }).addOnFailureListener(new OnFailureListener() {

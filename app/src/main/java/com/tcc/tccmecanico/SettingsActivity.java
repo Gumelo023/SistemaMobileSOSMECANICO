@@ -54,7 +54,7 @@ public class SettingsActivity extends AppCompatActivity {
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(SettingsActivity.this,MecanicosActivity.class);
+                redirectActivity(SettingsActivity.this,CatalogoMecanicos.class);
 
             }
         });

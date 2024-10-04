@@ -70,7 +70,7 @@ public class FeedbackActivity extends AppCompatActivity {
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(FeedbackActivity.this, MecanicosActivity.class);
+                redirectActivity(FeedbackActivity.this, CatalogoMecanicos.class);
             }
         });
         perfil.setOnClickListener(new View.OnClickListener() {

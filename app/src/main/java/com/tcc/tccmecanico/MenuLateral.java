@@ -62,6 +62,7 @@ public class MenuLateral extends AppCompatActivity {
             public void onClick(View v) {
                 recreate();
             }
+
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +73,7 @@ public class MenuLateral extends AppCompatActivity {
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this, MecanicosActivity.class);
+                redirectActivity(MenuLateral.this, CatalogoMecanicos.class);
             }
         });
         perfil.setOnClickListener(new View.OnClickListener() {
