@@ -1,7 +1,6 @@
 package com.tcc.tccmecanico;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -13,11 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-
-public class MenuLateral extends AppCompatActivity {
-
-    private FirebaseAuth mAuth;
+public class PerfilActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
@@ -26,21 +21,7 @@ public class MenuLateral extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_lateral);
-
-        CardView card_mecanicos = findViewById(R.id.card_mecanicos);
-        card_mecanicos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuLateral.this, CatalogoMecanicos.class);
-                startActivity(intent);
-
-            }
-
-
-        });
-
-
+        setContentView(R.layout.activity_perfil);
 
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
@@ -60,37 +41,40 @@ public class MenuLateral extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recreate();
+                redirectActivity(PerfilActivity.this, MenuLateral.class);
+
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               redirectActivity(MenuLateral.this, SettingsActivity.class);
+                redirectActivity(PerfilActivity.this, SettingsActivity.class);
             }
         });
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this, MecanicosActivity.class);
+                redirectActivity(PerfilActivity.this,MecanicosActivity.class);
+
             }
         });
         perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this,PerfilActivity.class);
+                recreate();
             }
         });
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this, FeedbackActivity.class);
+                redirectActivity(PerfilActivity.this, FeedbackActivity.class);
+
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuLateral.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PerfilActivity.this, "Logout", Toast.LENGTH_SHORT).show();
             }
         });
 

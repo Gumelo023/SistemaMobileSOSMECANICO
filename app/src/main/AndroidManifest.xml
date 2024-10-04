@@ -16,13 +16,25 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".MenuLateral"
+            android:name=".FeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MecanicosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CustomToolbaar"
             android:exported="false" />
         <activity
             android:name=".FormLogin"
             android:exported="false" />
         <activity
-            android:name=".TesteConexaoBD"
+            android:name=".MenuLateral"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,7 +70,7 @@
             android:name=".Avaliacao"
             android:exported="false" />
         <activity
-            android:name=".CustomToolbaar"
+            android:name=".TesteConexaoBD"
             android:exported="true" />
     </application>
 

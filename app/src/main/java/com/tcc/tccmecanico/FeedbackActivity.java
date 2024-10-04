@@ -1,7 +1,6 @@
 package com.tcc.tccmecanico;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
@@ -9,15 +8,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
-
-public class MenuLateral extends AppCompatActivity {
-
-    private FirebaseAuth mAuth;
+public class FeedbackActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
@@ -26,21 +24,7 @@ public class MenuLateral extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_lateral);
-
-        CardView card_mecanicos = findViewById(R.id.card_mecanicos);
-        card_mecanicos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MenuLateral.this, CatalogoMecanicos.class);
-                startActivity(intent);
-
-            }
-
-
-        });
-
-
+        setContentView(R.layout.activity_feedback);
 
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
@@ -51,6 +35,19 @@ public class MenuLateral extends AppCompatActivity {
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
 
+        RatingBar ratingBar = findViewById(R.id.ratingBar);
+        float rating = ratingBar.getRating();
+
+
+
+        EditText feedbackText = findViewById(R.id.feedback_text);
+        Button sendButton = findViewById(R.id.send_button);
+
+        sendButton.setOnClickListener(view -> {
+            String feedback = feedbackText.getText().toString();
+            // Lógica para enviar feedback, como salvar no banco de dados ou enviar para um servidor
+        });
+
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,37 +57,38 @@ public class MenuLateral extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                recreate();
+                redirectActivity(FeedbackActivity.this, MenuLateral.class);
+
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               redirectActivity(MenuLateral.this, SettingsActivity.class);
+                redirectActivity(FeedbackActivity.this, SettingsActivity.class);
             }
         });
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this, MecanicosActivity.class);
+                redirectActivity(FeedbackActivity.this, MecanicosActivity.class);
             }
         });
         perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this,PerfilActivity.class);
+                redirectActivity(FeedbackActivity.this,PerfilActivity.class);
             }
         });
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                redirectActivity(MenuLateral.this, FeedbackActivity.class);
+                recreate();
             }
         });
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuLateral.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FeedbackActivity.this, "Logout", Toast.LENGTH_SHORT).show();
             }
         });
 
