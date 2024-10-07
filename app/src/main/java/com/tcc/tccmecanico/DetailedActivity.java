@@ -6,10 +6,12 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 
@@ -41,7 +43,24 @@ public class DetailedActivity extends AppCompatActivity {
             binding.detailDesc.setText(desc);
             binding.detailIngredients.setText(ingredients);
             binding.detailImage.setImageResource(image);
+
+
+
+
         }
+
+        TextView detailDesc = findViewById(R.id.detailDesc);
+        detailDesc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String phone = "+5511999999999"; // Substitua pelo número desejado
+                String url = "https://api.whatsapp.com/send?phone=" + phone;
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);

@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import android.net.Uri;
 
 import com.tcc.tccmecanico.databinding.ActivityCatalogoMecanicosBinding;
 
@@ -62,6 +63,8 @@ public class CatalogoMecanicos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
