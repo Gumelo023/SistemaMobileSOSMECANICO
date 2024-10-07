@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drewerLayout"
-    android:background="@color/dark"
+    android:background="@color/white"
     tools:context=".PerfilActivity">
 
     <LinearLayout
@@ -49,7 +49,7 @@
             android:id="@+id/iconeUser"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/baseline_personbranco"
+            android:src="@drawable/baseline_person_24"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="30dp"
             app:layout_constraintTop_toBottomOf="@id/containerFoto"
@@ -60,7 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fawensley"
-            android:textColor="@color/white"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="40dp"
@@ -69,22 +69,12 @@
             app:layout_constraintStart_toEndOf="@id/iconeUser"/>
 
 
-        <ImageView
-            android:id="@+id/iconeEm"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_lock_24"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/iconeUser"
-            app:layout_constraintStart_toStartOf="parent"/>
-
 
         <ImageView
             android:id="@+id/iconeEmail"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/baseline_email_branco"
+            android:src="@drawable/baseline_email_black"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             app:layout_constraintTop_toBottomOf="@id/iconeUser"
@@ -96,50 +86,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fawensley@gmail.com"
-            android:textColor="@color/white"
+            android:textColor="@color/dark"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="20dp"
             app:layout_constraintTop_toBottomOf="@id/textNomeUsuario"
             app:layout_constraintStart_toEndOf="@id/iconeEmail"/>
-
-        <ImageView
-            android:id="@+id/iconeLocal"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/baseline_share_location_24"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/iconeEmail"
-            app:layout_constraintStart_toStartOf="parent"/>
-
-        <TextView
-            android:id="@+id/textLocal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Osasco"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="40dp"
-            android:layout_marginLeft="20dp"
-            app:layout_constraintTop_toBottomOf="@id/textEmailUsuario"
-            app:layout_constraintStart_toEndOf="@id/iconeLocal"/>
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Deslogar"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textAllCaps="false"
-            android:backgroundTint="@color/orange2"
-            android:padding="15dp"
-            android:layout_margin="80dp"
-            app:layout_constraintTop_toBottomOf="@id/textLocal"
-            />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

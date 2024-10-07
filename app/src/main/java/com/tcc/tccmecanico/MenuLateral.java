@@ -40,6 +40,17 @@ public class MenuLateral extends AppCompatActivity {
 
         });
 
+        CardView card_suporte = findViewById(R.id.card_suporte);
+        card_suporte.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuLateral.this, FeedbackActivity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
 
 
         drawerLayout = findViewById(R.id.drewerLayout);

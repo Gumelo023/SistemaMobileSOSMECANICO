@@ -20,74 +20,105 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="70dp">
 
         <LinearLayout
-            android:layout_marginTop="50dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:padding="20dp">
-
+            android:padding="16dp"
+            >
 
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/headerText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:text="Avalie como foi seu atendimento"
-                android:textColor="@color/dark"
-                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/retangulo"
+                android:padding="16dp"
+                android:text="Olá como podemos ajudar?"
                 android:textSize="20sp" />
 
-            <ImageView
-                android:id="@+id/vehicle_image"
-                android:layout_width="200dp"
-                android:layout_height="150dp"
-                android:layout_marginBottom="16dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/car_imagem" />
-
-            <RatingBar
-                android:id="@+id/ratingBar"
+            <TextView
+                android:id="@+id/infoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:numStars="5"
-                android:stepSize="1"
-                android:rating="1"
-                android:progressTint="#ff0"
+                android:layout_margin="15dp"
+                android:background="@color/white"
+                android:padding="16dp"
+                android:text="Qual o tempo de resposta? De 24 a 72 horas em dias úteis\n\nFale conosco Entre em contato pelo\n\n(11) 99999-9999\n\nTemos total preocupação com nossos clientes.
+        Você terá total suporte nos enviando o seu feedback." />
 
-                />
+            <TextView
+                android:id="@+id/spinner_subject"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:background="@drawable/retangulo"
+                android:padding="18dp"
+                android:text="Escolha o assunto desejado" />
+            <!--  Campo de Feedback  -->
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <!-- android:progressDrawable="@drawable/rating_bar"-->
+                <RadioButton
+                    android:id="@+id/radioMecanico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="Mecânico"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/radioProblemaApp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="#FFFFFF"
+                    android:text="Problema com o app"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/radioComentarios"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#FFFFFF"
+                    android:buttonTint="#FFFFFF"
+                    android:text="Comentários"
+                    android:textColor="@color/black" />
+            </RadioGroup>
 
             <EditText
-                android:id="@+id/feedback_text"
+                android:id="@+id/feedback_input"
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                android:layout_marginBottom="50dp"
-                android:background="@drawable/feedback_background"
-                android:gravity="top"
-                android:hint="De seu feedback"
-                android:inputType="textMultiLine"
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white" />
 
-            <!-- Botão Enviar -->
+                android:background="@color/white"
+                android:hint="Digite seu feedback"
+                android:padding="16dp" />
+            <!--  Botão Enviar  -->
             <Button
-                android:id="@+id/send_button"
+                android:id="@+id/button_send"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/orange"
-                android:textSize="20dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/button"
+                android:padding="10dp"
                 android:text="Enviar"
-                android:textColor="@color/white" />
+                android:layout_marginTop="10dp"/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
 
         </LinearLayout>
-
     </ScrollView>
+
 
     <RelativeLayout
         android:layout_width="300dp"

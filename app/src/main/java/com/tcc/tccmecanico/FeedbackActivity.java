@@ -35,18 +35,7 @@ public class FeedbackActivity extends AppCompatActivity {
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
 
-        RatingBar ratingBar = findViewById(R.id.ratingBar);
-        float rating = ratingBar.getRating();
 
-
-
-        EditText feedbackText = findViewById(R.id.feedback_text);
-        Button sendButton = findViewById(R.id.send_button);
-
-        sendButton.setOnClickListener(view -> {
-            String feedback = feedbackText.getText().toString();
-            // Lógica para enviar feedback, como salvar no banco de dados ou enviar para um servidor
-        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
