@@ -35,13 +35,13 @@ public class DetailedActivity extends AppCompatActivity {
         if (intent != null){
             String name = intent.getStringExtra("name");
             String local = intent.getStringExtra("local");
-            int ingredients = intent.getIntExtra("ingredients", R.string.maggiIngredients);
-            int desc = intent.getIntExtra("desc", R.string.maggieDesc);
+            int desc = intent.getIntExtra("desc", R.string.maggiIngredients);
+            int numb = intent.getIntExtra("numb", R.string.maggieDesc);
             int image = intent.getIntExtra("image", R.drawable.maggi);
             binding.detailName.setText(name);
             binding.detailTime.setText(local);
+            binding.detailNumb.setText(numb);
             binding.detailDesc.setText(desc);
-            binding.detailIngredients.setText(ingredients);
             binding.detailImage.setImageResource(image);
 
 
@@ -49,11 +49,11 @@ public class DetailedActivity extends AppCompatActivity {
 
         }
 
-        TextView detailDesc = findViewById(R.id.detailDesc);
-        detailDesc.setOnClickListener(new View.OnClickListener() {
+        TextView detailNumb = findViewById(R.id.detailNumb);
+        detailNumb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phone = "+5511999999999"; // Substitua pelo número desejado
+                String phone = getResources().getString(R.string.maggieDesc);
                 String url = "https://api.whatsapp.com/send?phone=" + phone;
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));

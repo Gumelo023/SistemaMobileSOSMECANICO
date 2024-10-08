@@ -17,40 +17,20 @@
     <string name="cakeDesc"> 11 19019-1900</string>
 
     //joao paulo
-    <string name="pancakeIngredients">Maggi Noodles
-\nWater
-\nMaggi Masala</string>
-    <string name="pancakeDesc">Add one and half cup of water
-Add maggi noodles and boil it
-Add the maggi masala on to it
-\nWait for 2 mins
-\nMaggi is ready!</string>
+    <string name="pancakeIngredients">Olá, meu nome é João e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
+    <string name="pancakeDesc">11 19019-1900</string>
+
     //pizza
-    <string name="pizzaIngredients">Maggi Noodles
-\nWater
-\nMaggi Masala</string>
-    <string name="pizzaDesc">Add one and half cup of water
-Add maggi noodles and boil it
-Add the maggi masala on to it
-\nWait for 2 mins
-\nMaggi is ready!</string>
+    <string name="pizzaIngredients">Olá, meu nome é João e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
+    <string name="pizzaDesc">11 19019-1900</string>
+
     //burgers
-    <string name="burgerIngredients">Maggi Noodles
-\nWater
-\nMaggi Masala</string>
-    <string name="burgerDesc">Add one and half cup of water
-\nAdd maggi noodles and boil it
-\nAdd the maggi masala on to it
-\nWait for 2 mins
-\nMaggi is ready!</string>
+    <string name="burgerIngredients">Olá, meu nome é João e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
+    <string name="burgerDesc">11 19019-1900
+</string>
+
     //fries
-    <string name="friesIngredients">Maggi Noodles
-\nWater
-\nMaggi Masala</string>
-    <string name="friesDesc">Add one and half cup of water
-\nAdd maggi noodles and boil it
-\nAdd the maggi masala on to it
-\nWait for 2 mins
-\nMaggi is ready!</string>
+    <string name="JoaoDesc">Olá, meu nome é João e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
+    <string name="friesDesc">11 19019-1900</string>
 
 </resources>

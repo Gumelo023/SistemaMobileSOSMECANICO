@@ -1,14 +1,14 @@
 package com.tcc.tccmecanico;
 
 public class ListData {
-        String name, time;
-        int ingredients, desc;
+        String name, city;
+        int desc, numb;
         int image;
-        public ListData(String name, String time, int ingredients, int desc, int image) {
+        public ListData(String name, String city, int desc, int numb, int image) {
             this.name = name;
-            this.time = time;
-            this.ingredients = ingredients;
+            this.city = city;
             this.desc = desc;
+            this.numb = numb;
             this.image = image;
         }
     }
