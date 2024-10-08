@@ -13,6 +13,9 @@ public class Usuario {
     private String statusUsuario;
 
 
+    public String getNome() {
+        return nome;
+    }
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -66,9 +69,9 @@ public class Usuario {
         this.statusUsuario = statusUsuario;
     }
 
-    public Usuario( String nome1, String email, String senha, String nivelAcesso, String foto, String dataCadastro, String statusUsuario) {
+    public Usuario( String nome, String email, String senha, String nivelAcesso, String foto, String dataCadastro, String statusUsuario) {
 
-        this.nome = nome1;
+        this.nome = nome;
         this.email = email;
         this.senha = senha;
         this.nivelAcesso = nivelAcesso;
