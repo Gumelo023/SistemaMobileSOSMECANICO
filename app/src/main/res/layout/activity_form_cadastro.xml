@@ -51,12 +51,24 @@
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/signup_email"
+                android:id="@+id/signup_nome"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/edit_text"
                 android:drawableLeft="@drawable/baseline_person_24"
+                android:drawablePadding="8dp"
+                android:hint="Nome"
+                android:padding="8dp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/signup_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_text"
+                android:drawableLeft="@drawable/baseline_email_black"
                 android:drawablePadding="8dp"
                 android:hint="Email"
                 android:padding="8dp"
@@ -73,6 +85,8 @@
                 android:hint="Password"
                 android:padding="8dp"
                 android:textColor="@color/black" />
+
+
 
             <Button
                 android:id="@+id/signup_button"
