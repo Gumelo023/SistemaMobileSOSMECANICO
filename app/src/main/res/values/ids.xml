@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="editNome" type="id" />
+    <item name="editEmail" type="id" />
+    <item name="editSenha" type="id" />
+    <item name="btn_cadastro" type="id" />
+    <item name="btn_cadastrar" type="id" />
+</resources>
