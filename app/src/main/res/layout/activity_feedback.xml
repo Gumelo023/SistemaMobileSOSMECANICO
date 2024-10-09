@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drewerLayout"
-    tools:context=".FeedbackActivity">
+    tools:context=".FeedbackActivity"
+    android:background="@color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,7 +36,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/retangulo"
+                android:background="@drawable/retangulo_feedback2"
+                android:textColor="@color/dark"
                 android:padding="16dp"
                 android:text="Olá como podemos ajudar?"
                 android:textSize="20sp" />
@@ -44,10 +46,11 @@
                 android:id="@+id/infoText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="15dp"
-                android:background="@color/white"
+                android:layout_margin="10dp"
+                android:background="@drawable/retangulo_feedback"
                 android:padding="16dp"
-                android:text="Qual o tempo de resposta? De 24 a 72 horas em dias úteis\n\nFale conosco Entre em contato pelo\n\n(11) 99999-9999\n\nTemos total preocupação com nossos clientes.
+                android:textColor="@color/dark"
+                android:text="Qual o tempo de resposta? De 24 a 72 horas em dias úteis\n\nEntre em contato conosco pelo:\n\contant@sosmecanico.com\n\nTemos total preocupação com nossos clientes.
         Você terá total suporte nos enviando o seu feedback." />
 
             <TextView
@@ -56,22 +59,24 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
-                android:background="@drawable/retangulo"
+                android:background="@drawable/retangulo_feedback2"
                 android:padding="18dp"
+                android:textColor="@color/dark"
                 android:text="Escolha o assunto desejado" />
-            <!--  Campo de Feedback  -->
+
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                >
 
                 <RadioButton
                     android:id="@+id/radioMecanico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:buttonTint="#FFFFFF"
+                    android:buttonTint="@color/orange2"
                     android:text="Mecânico"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/dark" />
 
                 <RadioButton
                     android:id="@+id/radioProblemaApp"
@@ -79,25 +84,26 @@
                     android:layout_height="wrap_content"
                     android:buttonTint="#FFFFFF"
                     android:text="Problema com o app"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/dark" />
 
                 <RadioButton
                     android:id="@+id/radioComentarios"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="#FFFFFF"
                     android:buttonTint="#FFFFFF"
                     android:text="Comentários"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/dark" />
             </RadioGroup>
 
             <EditText
                 android:id="@+id/feedback_input"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-
-                android:background="@color/white"
+                android:layout_margin="10dp"
+                android:layout_height="200dp"
+                android:textColorHint="@color/dark"
+                android:background="@drawable/retangulo_feedback"
                 android:hint="Digite seu feedback"
+                android:textColor="@color/dark"
                 android:padding="16dp" />
             <!--  Botão Enviar  -->
             <Button
@@ -108,6 +114,7 @@
                 android:background="@drawable/button"
                 android:padding="10dp"
                 android:text="Enviar"
+
                 android:layout_marginTop="10dp"/>
 
 

@@ -14,7 +14,7 @@ public class UsuarioCrud {
         String sql = "Insert into Usuario  (nome, email, senha, nivelAcesso, foto, dataCadastro, statusUsuario) values (?,?,?,?,?,?,?)";
 
         try {
-            PreparedStatement pst = conexaoBanco.conectar(ctx).prepareStatement(sql);
+            PreparedStatement pst = Conexao.conectar(ctx).prepareStatement(sql);
 
             pst.setString(1, usuario.getNome());
             pst.setString(2, usuario.getEmail());
@@ -37,11 +37,13 @@ public class UsuarioCrud {
 
 
 
+
+
+        }
+
+}
+
         }
 
 
-    }
-
-
-}
 

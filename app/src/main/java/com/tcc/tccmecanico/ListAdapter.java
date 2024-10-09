@@ -26,7 +26,7 @@ public class ListAdapter extends ArrayAdapter<ListData> {
         TextView listLocal = view.findViewById(R.id.listLocal);
         listImage.setImageResource(listData.image);
         listName.setText(listData.name);
-        listLocal.setText(listData.time);
+        listLocal.setText(listData.city);
         return view;
     }
 }

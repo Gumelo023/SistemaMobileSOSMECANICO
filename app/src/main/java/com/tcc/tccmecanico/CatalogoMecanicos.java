@@ -38,13 +38,13 @@ public class CatalogoMecanicos extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         int[] imageList = {R.drawable.foto_gustavo, R.drawable.foto_matheus, R.drawable.foto_wellington, R.drawable.foto_joao, R.drawable.foto_robson, R.drawable.foto_xavier, R.drawable.foto_luan};
-        int[] ingredientList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.friesIngredients};
-        int[] descList = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
+        int[] descList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.JoaoDesc};
+        int[] numblist = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
         String[] nameList = {"Gustavo Melo", "Matheus Santos", "Fawensley Charite", "Joao Paulo", "Robson Alex","Guilherme Xavier", "Luan Santos"};
         String[] localList= {"Barueri", "Osasco", "Carapicuiba","Jandira", "Itapevi", "Sorocaba", "Osasco"};
 
         for (int i = 0; i < imageList.length; i++){
-            listData = new ListData(nameList[i], localList[i], ingredientList[i], descList[i], imageList[i]);
+            listData = new ListData(nameList[i], localList[i], descList[i], numblist[i], imageList[i]);
             dataArrayList.add(listData);
         }
 
@@ -57,8 +57,8 @@ public class CatalogoMecanicos extends AppCompatActivity {
                 Intent intent = new Intent(CatalogoMecanicos.this, DetailedActivity.class);
                 intent.putExtra("name", nameList[i]);
                 intent.putExtra("local", localList[i]);
-                intent.putExtra("ingredients", ingredientList[i]);
                 intent.putExtra("desc", descList[i]);
+                intent.putExtra("numb", numblist[i]);
                 intent.putExtra("image", imageList[i]);
                 startActivity(intent);
             }

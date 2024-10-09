@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.TCCMECANICO" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your dark theme here. -->    <item name="colorPrimary">@color/lavender</item>
+          <item name="colorPrimary">@color/orange</item>
         <item name="colorPrimaryVariant">@color/orange2</item>
         <item name="colorOnPrimary">@color/white</item>
 
