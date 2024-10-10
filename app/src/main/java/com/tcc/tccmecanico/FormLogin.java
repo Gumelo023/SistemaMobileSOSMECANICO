@@ -24,9 +24,9 @@ import java.sql.ResultSet;
 public class FormLogin extends AppCompatActivity {
 
 
-    private EditText loginEmail, loginPassword;
-    private TextView signupRedirectText;
-    private Button loginbutton;
+     EditText loginEmail, loginPassword;
+     TextView signupRedirectText;
+     Button loginbutton;
 
 
 
@@ -70,8 +70,8 @@ public class FormLogin extends AppCompatActivity {
             try {
                 Class.forName("net.sourceforge.jtds.jdbc.Driver");
                 Connection connection =
-                        DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.0.57;"+
-                                "databaseName=Banco_Android;user=sa;password=@ITB123456;");
+                        DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.70;" +
+                                "databaseName=bd_sosmecanico;user=sa;password=@ITB123456");
                 String query = "SELECT * FROM Usuario WHERE nome = ? AND email = ? AND senha = ?";
                 PreparedStatement preparedStatement =
                         connection.prepareStatement(query);
@@ -97,7 +97,7 @@ public class FormLogin extends AppCompatActivity {
                 Toast.makeText(FormLogin.this, "Login bem-sucedido!",
                         Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(FormLogin.this,
-                        MainActivity.class));
+                       MenuLateral.class));
                 finish();
             } else {
 
