@@ -1,6 +1,5 @@
 package com.tcc.tccmecanico;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,65 +8,58 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.Firebase;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.android.material.snackbar.Snackbar;
+
 
 public class FormCadastro extends AppCompatActivity {
 
-    private FirebaseAuth auth;
-    private EditText signupEmail, signupPassword;
-    private Button signupButton;
 
+    private EditText signupEmail, signupPassword, signupNome;
+    private Button signupButton;
     private TextView loginRedirectText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_cadastro);
-        Button button = findViewById(R.id.signup_button);
 
-        auth = FirebaseAuth.getInstance();
-        signupEmail = findViewById(R.id.signup_email);
-        signupPassword = findViewById(R.id.signup_password);
-        signupButton = findViewById(R.id.signup_button);
+        signupNome = (EditText) findViewById(R.id.signup_nome);
+        signupEmail = (EditText) findViewById(R.id.signup_email);
+        signupPassword = (EditText) findViewById(R.id.signup_password);
+        signupButton = (Button) findViewById(R.id.signup_button);
         loginRedirectText = findViewById(R.id.loginRedirectText);
-
-
 
         signupButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                String user = signupEmail.getText().toString().trim();
-                String pass =  signupPassword.getText().toString().trim();
+            public void onClick(View v) {
 
-                if (user.isEmpty()){
-                    signupEmail.setError("Email cannot be empty");
+                String nome = signupNome.getText().toString();
+                String email =signupEmail.getText().toString();
+                String senha = signupPassword.getText().toString();
+                if (nome.isEmpty() || email.isEmpty() || senha.isEmpty()) {
+                    Snackbar.make(loginRedirectText, "Preencha todos os campos!",
+                            Snackbar.LENGTH_LONG).show();
+                    return;
                 }
-                if (pass.isEmpty()){
-                    signupPassword.setError("Password cannot empty");
+
+                Usuario user = new Usuario(
+                        signupNome.getText().toString(),
+                        signupEmail.getText().toString(),
+                        signupPassword.getText().toString()
+                );
+
+                int res = UsuarioCrud.InserirUsuario(user, getBaseContext());
+                if (res <=0){
+                    Snackbar.make(signupButton, "E-mail já cadastrado", Snackbar.LENGTH_LONG).show();
                 } else {
-                    auth.createUserWithEmailAndPassword(user, pass).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                        @Override
-                        public void onComplete(@NonNull Task<AuthResult> task) {
-                            if (task.isSuccessful()){
-                                Toast.makeText(FormCadastro.this, "Cadastro Bem Sucedido", Toast.LENGTH_SHORT).show();
-                                startActivity(new Intent(FormCadastro.this,FormLogin.class));
-                            } else {
-                                Toast.makeText(FormCadastro.this, "Cadastro Falhou" + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    });
-
-
+                    Snackbar.make(signupButton, "Dados Cadastrados com Sucesso", Snackbar.LENGTH_LONG).show();
                 }
 
             }
         });
+
+
 
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,6 +67,7 @@ public class FormCadastro extends AppCompatActivity {
                 startActivity(new Intent(FormCadastro.this, FormLogin.class));
             }
         });
+    }
 
     }
-}
+

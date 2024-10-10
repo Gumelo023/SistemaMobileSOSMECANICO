@@ -1,5 +1,6 @@
 package com.tcc.tccmecanico;
 
+import android.content.Context;
 import android.os.StrictMode;
 
 import java.sql.Connection;
@@ -8,7 +9,7 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    public static Connection conectar(TesteConexaoBD testeConexaoBD) {
+    public static Connection conectar(Context testeConexaoBD) {
         Connection conn = null;
         try {
             StrictMode.ThreadPolicy politica;

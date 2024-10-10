@@ -2,18 +2,19 @@ package com.tcc.tccmecanico;
 
 public class Usuario {
 
+    private static String nome;
 
+    private static String email;
 
-    private String nome;
-    private String email;
-    private String senha;
-    private String nivelAcesso;
-    private String foto;
-    private String dataCadastro;
-    private String statusUsuario;
+    private static String senha;
 
+    public Usuario(String nome, String email, String senha) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha;
+    }
 
-    public String getNome() {
+    public static String getNome() {
         return nome;
     }
 
@@ -21,7 +22,7 @@ public class Usuario {
         this.nome = nome;
     }
 
-    public String getEmail() {
+    public static String getEmail() {
         return email;
     }
 
@@ -29,54 +30,11 @@ public class Usuario {
         this.email = email;
     }
 
-    public String getSenha() {
+    public static String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
-    }
-
-    public String getNivelAcesso() {
-        return nivelAcesso;
-    }
-
-    public void setNivelAcesso(String nivelAcesso) {
-        this.nivelAcesso = nivelAcesso;
-    }
-
-    public String getFoto() {
-        return foto;
-    }
-
-    public void setFoto(String foto) {
-        this.foto = foto;
-    }
-
-    public String getDataCadastro() {
-        return dataCadastro;
-    }
-
-    public void setDataCadastro(String dataCadastro) {
-        this.dataCadastro = dataCadastro;
-    }
-
-    public String getStatusUsuario() {
-        return statusUsuario;
-    }
-
-    public void setStatusUsuario(String statusUsuario) {
-        this.statusUsuario = statusUsuario;
-    }
-
-    public Usuario( String nome, String email, String senha, String nivelAcesso, String foto, String dataCadastro, String statusUsuario) {
-
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.nivelAcesso = nivelAcesso;
-        this.foto = foto;
-        this.dataCadastro = dataCadastro;
-        this.statusUsuario = statusUsuario;
     }
 }
