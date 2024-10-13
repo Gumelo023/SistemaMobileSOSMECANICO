@@ -8,10 +8,13 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.renderscript.ScriptGroup;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.SearchView;
 import android.widget.Toast;
 import android.net.Uri;
 
@@ -31,13 +34,18 @@ public class CatalogoMecanicos extends AppCompatActivity {
     ImageView menu;
     LinearLayout home, settings, mecanicos, perfil, feedback, logout;
 
+    private SearchView searchView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityCatalogoMecanicosBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        int[] imageList = {R.drawable.imagem_teste, R.drawable.imagem_teste, R.drawable.imagem_teste, R.drawable.imagem_teste,R.drawable.imagem_teste, R.drawable.imagem_teste, R.drawable.imagem_teste};
+
+
+
+        int[] imageList = {R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico,R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico};
         int[] descList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.JoaoDesc};
         int[] numblist = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
         String[] nameList = {"Gustavo Melo", "Matheus Santos", "Fawensley Charite", "Joao Paulo", "Robson Alex","Guilherme Xavier", "Luan Santos"};
@@ -63,8 +71,6 @@ public class CatalogoMecanicos extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
 
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
@@ -121,6 +127,44 @@ public class CatalogoMecanicos extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_search, menu);
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) searchItem.getActionView();
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // Realize a busca com o texto submetido
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                // Atualize os resultados da busca conforme o texto muda
+                listAdapter.getFilter().filter(newText);
+                return false;
+            }
+        });
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_search) {
+            // Ação para o item de pesquisa
+            return true;
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);
     }
