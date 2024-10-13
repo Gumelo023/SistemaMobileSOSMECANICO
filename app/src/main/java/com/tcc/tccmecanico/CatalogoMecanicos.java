@@ -75,7 +75,6 @@ public class CatalogoMecanicos extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
-        settings = findViewById(R.id.settings);
         mecanicos = findViewById(R.id.mecanicos);
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
@@ -92,12 +91,6 @@ public class CatalogoMecanicos extends AppCompatActivity {
             public void onClick(View v) {
                 redirectActivity(CatalogoMecanicos.this, MenuLateral.class);
 
-            }
-        });
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(CatalogoMecanicos.this, SettingsActivity.class);
             }
         });
         mecanicos.setOnClickListener(new View.OnClickListener() {

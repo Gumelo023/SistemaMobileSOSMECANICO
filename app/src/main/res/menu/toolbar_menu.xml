@@ -13,9 +13,7 @@
     <item
         android:title="Feedback"
         android:id="@+id/feedback_toolbar"/>
-    <item
-        android:title="Configurações"
-        android:id="@+id/configurações"/>
+   
     <item
         android:title="Sair"
         android:id="@+id/logout"/>

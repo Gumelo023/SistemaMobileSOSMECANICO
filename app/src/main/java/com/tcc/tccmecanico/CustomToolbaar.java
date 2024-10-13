@@ -38,9 +38,6 @@ public class CustomToolbaar extends AppCompatActivity {
         if (id == R.id.feedback_toolbar) {
             Toast.makeText(this, "Faça sua avaliação", Toast.LENGTH_SHORT).show();
 
-        }
-        if (id == R.id.configurações) {
-            Toast.makeText(this, "Configurações", Toast.LENGTH_SHORT).show();
 
         }
         if (id == R.id.tela_inicial) {

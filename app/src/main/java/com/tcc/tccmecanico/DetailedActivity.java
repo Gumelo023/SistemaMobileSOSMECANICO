@@ -64,7 +64,6 @@ public class DetailedActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drewerLayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
-        settings = findViewById(R.id.settings);
         mecanicos = findViewById(R.id.mecanicos);
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
@@ -80,12 +79,6 @@ public class DetailedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 redirectActivity(DetailedActivity.this, MenuLateral.class);
-            }
-        });
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                redirectActivity(DetailedActivity.this, SettingsActivity.class);
             }
         });
         mecanicos.setOnClickListener(new View.OnClickListener() {
