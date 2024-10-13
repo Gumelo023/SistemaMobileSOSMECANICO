@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:id="@+id/drewerLayout"
     android:background="@color/white"
-    tools:context=".CatalogoMecanicos">
+    tools:context=".CatalogoMecanicos"
+    android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,8 +17,7 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/toolbar"/>
-
+            layout="@layout/toolbar" />
 
     </LinearLayout>
 
@@ -24,19 +25,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
-    <ListView
-        android:id="@+id/listview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="70dp"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="10.0sp"
-        android:scrollbars="vertical"
-        app:layout_constraintTop_toTopOf="@+id/retangulocatalogo"
-        tools:listitem="@layout/activity_list_item" />
-
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10.0sp"
+            android:scrollbars="vertical"
+            app:layout_constraintTop_toTopOf="@+id/retangulocatalogo"
+            tools:listitem="@layout/activity_list_item" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

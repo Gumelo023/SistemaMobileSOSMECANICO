@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">TCC MECANICO</string>
+    <string name="app_name">SOS Mecânico</string>
     <string name="entrar">Entrar</string>
     <string name="text_cadastro">Registre-se Aqui</string>
     <string name="title_cadastro">Cadastre-se</string>
+    <string name="search">Pesquisar</string>
 
     //gustavo
     <string name="pastaIngredients">Olá, meu nome é Gustavo e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>

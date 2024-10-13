@@ -38,7 +38,7 @@
             android:name=".FormLogin"
             android:exported="false" />
         <activity
-            android:name=".Tela_Inicial"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,7 +62,7 @@
             android:name=".FormCadastro"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Tela_Inicial"
             android:exported="false" />
         <activity
             android:name=".TesteConexaoBD"
