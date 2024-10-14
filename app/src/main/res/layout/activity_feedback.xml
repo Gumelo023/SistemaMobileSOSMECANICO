@@ -28,8 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp"
-            >
+            android:padding="16dp">
 
             <TextView
                 android:id="@+id/headerText"
@@ -51,7 +50,7 @@
                 android:padding="16dp"
                 android:textColor="@color/dark"
                 android:text="Qual o tempo de resposta? De 24 a 72 horas em dias úteis\n\nEntre em contato conosco pelo:\n\contant@sosmecanico.com\n\nTemos total preocupação com nossos clientes.
-        Você terá total suporte nos enviando o seu feedback." />
+                Você terá total suporte nos enviando o seu feedback." />
 
             <TextView
                 android:id="@+id/spinner_subject"
@@ -64,11 +63,18 @@
                 android:textColor="@color/dark"
                 android:text="Escolha o assunto desejado" />
 
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Digite seu email"
+                android:inputType="textEmailAddress"
+                android:layout_margin="10dp" />
+
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                >
+                android:layout_height="wrap_content">
 
                 <RadioButton
                     android:id="@+id/radioMecanico"
@@ -105,6 +111,7 @@
                 android:hint="Digite seu feedback"
                 android:textColor="@color/dark"
                 android:padding="16dp" />
+
             <!--  Botão Enviar  -->
             <Button
                 android:id="@+id/button_send"
@@ -114,9 +121,7 @@
                 android:background="@drawable/button"
                 android:padding="10dp"
                 android:text="Enviar"
-
                 android:layout_marginTop="10dp"/>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -125,7 +130,6 @@
 
         </LinearLayout>
     </ScrollView>
-
 
     <RelativeLayout
         android:layout_width="300dp"
