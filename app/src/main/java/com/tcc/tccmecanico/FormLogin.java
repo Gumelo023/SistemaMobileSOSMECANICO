@@ -60,9 +60,9 @@ public class FormLogin extends AppCompatActivity {
                 try {
 
                     Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.56.1;"+
+                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.2.107;"+
                             "databaseName=bd_sosmecanico;user=sa;password=@ITB123456;");
-                    String query = "SELECT * FROM Usuario WHERE nome = ? AND email = ? AND senha = ?";
+                    String query = "SELECT * FROM UsuarioMob WHERE nome = ? AND email = ? AND senha = ?";
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
                     preparedStatement.setString(1, nome);
                     preparedStatement.setString(2, email);
@@ -87,7 +87,7 @@ public class FormLogin extends AppCompatActivity {
                 if (success) {
                     // Login bem-sucedido, redireciona para a Home
                     Toast.makeText(FormLogin.this, "Login bem-sucedido!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(FormLogin.this, MainActivity.class));
+                    startActivity(new Intent(FormLogin.this, MenuLateral.class));
                     finish(); // Fecha a tela de login
                 } else {
                     // Falha no login

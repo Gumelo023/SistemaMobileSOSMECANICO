@@ -46,7 +46,7 @@ public class FormCadastro extends AppCompatActivity {
                 }
 
 
-                Usuario user = new Usuario(
+                UsuarioMob user = new UsuarioMob(
                         signup_nome.getText().toString(),
                         signup_email.getText().toString(),
                         signup_password.getText().toString());
@@ -56,6 +56,7 @@ public class FormCadastro extends AppCompatActivity {
 
 
                 int res = UsuarioCrud.InserirUsuario(user, getBaseContext());
+                System.out.println(res);
                 if (res <=0){
                     Snackbar.make(signup_button, "E-mail já cadastrado!", Snackbar.LENGTH_LONG).show();
                 } else {
