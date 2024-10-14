@@ -21,6 +21,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        }, 3000); // 3000 milissegundos = 3 segundos
+        }, 2000); // 3000 milissegundos = 3 segundos
     }
 }
