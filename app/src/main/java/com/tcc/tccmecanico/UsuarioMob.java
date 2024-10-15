@@ -2,19 +2,19 @@ package com.tcc.tccmecanico;
 
 public class UsuarioMob {
 
-    private static String nome;
 
-    private static String email;
+    private String nome,email,senha, statusUsuario;
 
-    private static String senha;
 
     public UsuarioMob(String nome, String email, String senha) {
+
         this.nome = nome;
         this.email = email;
         this.senha = senha;
     }
 
-    public static String getNome() {
+
+    public String getNome() {
         return nome;
     }
 
@@ -22,7 +22,7 @@ public class UsuarioMob {
         this.nome = nome;
     }
 
-    public static String getEmail() {
+    public String getEmail() {
         return email;
     }
 
@@ -30,11 +30,19 @@ public class UsuarioMob {
         this.email = email;
     }
 
-    public static String getSenha() {
+    public String getSenha() {
         return senha;
     }
 
     public void setSenha(String senha) {
         this.senha = senha;
+    }
+
+    public String getStatusUsuario() {
+        return statusUsuario;
+    }
+
+    public void setStatusUsuario(String statusUsuario) {
+        this.statusUsuario = statusUsuario;
     }
 }

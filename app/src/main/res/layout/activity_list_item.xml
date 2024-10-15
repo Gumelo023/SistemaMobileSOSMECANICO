@@ -27,13 +27,13 @@
             android:layout_height="80dp"
             android:layout_gravity="center"
            android:layout_margin="10dp"
-            app:cardCornerRadius="150dp"
-            app:cardElevation="10dp">
+            app:cardCornerRadius="40dp"
+            app:cardElevation="5dp">
 
             <ImageView
                 android:id="@+id/listImage"
                 android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
                 android:scaleType="fitXY"
                 android:src="@drawable/homemmecanico" />
         </androidx.cardview.widget.CardView>
