@@ -3,6 +3,7 @@ package com.tcc.tccmecanico;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -32,6 +33,7 @@ public class FormLogin extends AppCompatActivity {
             login_password = findViewById(R.id.login_password);
             login_button = findViewById(R.id.login_button);
 
+
             login_button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -58,7 +60,7 @@ public class FormLogin extends AppCompatActivity {
                 try {
 
                     Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://GP/SQLEXPRESS;"+
+                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.2.197;"+
                             "databaseName=bd_sosmecanico;user=sa;password=@ITB123456;");
                     String query = "SELECT * FROM UsuarioMob WHERE nome = ? AND email = ? AND senha = ?";
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
@@ -93,4 +95,6 @@ public class FormLogin extends AppCompatActivity {
                 }
             }
         }
+
+
     }

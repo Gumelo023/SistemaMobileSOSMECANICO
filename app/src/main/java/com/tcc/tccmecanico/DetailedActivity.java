@@ -54,7 +54,7 @@ public class DetailedActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String phone = getResources().getString(R.string.maggieDesc);
-                String url = "https://api.whatsapp.com/send?phone=" + phone;
+                String url = "https://api.whatsapp.com/send?phone=" + "5511988491368";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
