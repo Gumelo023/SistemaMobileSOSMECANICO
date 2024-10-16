@@ -60,7 +60,7 @@ public class FormLogin extends AppCompatActivity {
                 try {
 
                     Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.2.197;"+
+                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.56.1;"+
                             "databaseName=bd_sosmecanico;user=sa;password=@ITB123456;");
                     String query = "SELECT * FROM UsuarioMob WHERE nome = ? AND email = ? AND senha = ?";
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
