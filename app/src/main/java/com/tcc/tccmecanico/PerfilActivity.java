@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PerfilActivity extends AppCompatActivity {
@@ -30,6 +31,20 @@ public class PerfilActivity extends AppCompatActivity {
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
+        TextView nome = findViewById(R.id.nomeusuario);
+        TextView email = findViewById(R.id.emailusuario);
+
+
+        try {
+            UsuarioMob usuarioMob = Conexao.obterLogado(getBaseContext());
+
+            nome.setText(usuarioMob.getNome());
+            email.setText(usuarioMob.getEmail());
+
+        }
+        catch (Exception e) {
+
+        }
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override

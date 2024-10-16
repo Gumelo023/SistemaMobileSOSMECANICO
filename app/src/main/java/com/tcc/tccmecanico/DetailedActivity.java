@@ -21,7 +21,7 @@ public class DetailedActivity extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings, mecanicos, perfil, feedback, logout;
+    LinearLayout home, sobrenos, mecanicos, perfil, feedback, logout;
 
     ActivityDetailedBinding binding;
 
@@ -68,6 +68,7 @@ public class DetailedActivity extends AppCompatActivity {
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
+        sobrenos = findViewById(R.id.sobrenos);
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,12 +76,21 @@ public class DetailedActivity extends AppCompatActivity {
                 openDrawer(drawerLayout);
             }
         });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 redirectActivity(DetailedActivity.this, MenuLateral.class);
             }
         });
+
+        sobrenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(DetailedActivity.this, SobreNos_Activity.class);
+            }
+        });
+
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

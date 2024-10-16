@@ -56,7 +56,7 @@
             app:layout_constraintStart_toStartOf="parent"/>
 
         <TextView
-            android:id="@+id/textNomeUsuario"
+            android:id="@+id/nomeusuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome usuario"
@@ -82,7 +82,7 @@
 
 
         <TextView
-            android:id="@+id/textEmailUsuario"
+            android:id="@+id/emailusuario"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="email usuario"
@@ -91,7 +91,7 @@
             android:textStyle="bold"
             android:layout_marginTop="40dp"
             android:layout_marginLeft="20dp"
-            app:layout_constraintTop_toBottomOf="@id/textNomeUsuario"
+            app:layout_constraintTop_toBottomOf="@id/nomeusuario"
             app:layout_constraintStart_toEndOf="@id/iconeEmail"/>
 
 

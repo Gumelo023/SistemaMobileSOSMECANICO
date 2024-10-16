@@ -34,4 +34,12 @@
     <string name="JoaoDesc">Olá, meu nome é João e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
     <string name="friesDesc">11 19019-1900</string>
 
+    <string name="Sobre_nos">Bem-vindo ao SOS MECÂNICO!\n\n
+Nosso objetivo é oferecer assistência mecânica de alta qualidade diretamente onde você estiver. \n
+Sabemos que imprevistos com o veículo podem acontecer a qualquer momento, e estamos aqui para ajudar.\n\n
+Com o SOS MECÂNICO, você pode contar com um serviço rápido, confiável e eficiente, garantindo que você volte à estrada o mais rápido possível.\n\n
+Nossos mecânicos especializados, que também são usuários do aplicativo, estãp prontos para atender suas necessidades com profissionalismo e dedicação, realizando trabalhos a domicílio.\n\n
+Confie no SOS MECÂNICO para resolver seus problemas automotivos com a conveniência que você merece.
+</string>
+
 </resources>

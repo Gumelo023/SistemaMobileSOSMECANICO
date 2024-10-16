@@ -11,6 +11,7 @@ public class UsuarioMob {
         this.nome = nome;
         this.email = email;
         this.senha = senha;
+        this.statusUsuario = statusUsuario;
     }
 
 

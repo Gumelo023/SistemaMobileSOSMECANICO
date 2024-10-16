@@ -13,6 +13,9 @@
     <item
         android:title="Feedback"
         android:id="@+id/feedback_toolbar"/>
+    <item
+        android:title="Sobre Nós"
+        android:id="@+id/sobrenos_toolbar"/>
    
     <item
         android:title="Sair"

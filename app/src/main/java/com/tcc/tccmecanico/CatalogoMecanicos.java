@@ -32,7 +32,7 @@ public class CatalogoMecanicos extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings, mecanicos, perfil, feedback, logout;
+    LinearLayout home, sobrenos, mecanicos, perfil, feedback, logout;
 
     private SearchView searchView;
 
@@ -79,6 +79,8 @@ public class CatalogoMecanicos extends AppCompatActivity {
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
+        sobrenos = findViewById(R.id.sobrenos);
+
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,6 +99,13 @@ public class CatalogoMecanicos extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 recreate();
+            }
+        });
+
+        sobrenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(CatalogoMecanicos.this, SobreNos_Activity.class);
             }
         });
         perfil.setOnClickListener(new View.OnClickListener() {

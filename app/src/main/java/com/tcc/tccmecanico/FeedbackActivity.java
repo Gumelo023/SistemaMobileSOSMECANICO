@@ -13,44 +13,60 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+import java.sql.SQLException;
 
 public class FeedbackActivity extends AppCompatActivity {
-
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings, mecanicos, perfil, feedback, logout;
+    LinearLayout home, sobrenos, mecanicos, perfil, feedback, logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feedback);
 
-        EditText emailInput = findViewById(R.id.email_input); // Novo EditText para o email
         EditText feedbackInput = findViewById(R.id.feedback_input); // EditText para o feedback
         Button buttonSend = findViewById(R.id.button_send);
 
         buttonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String subject = "Feedback do usuário";
-                String messageBody = feedbackInput.getText().toString();
-                String userEmail = emailInput.getText().toString();
+                try {
+                    UsuarioMob usuario = Conexao.obterLogado(FeedbackActivity.this);
+                    if (usuario == null) {
+                        Toast.makeText(FeedbackActivity.this, "Usuário não encontrado.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
-                if (userEmail.isEmpty() || messageBody.isEmpty()) {
-                    Toast.makeText(FeedbackActivity.this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
-                    return;
+                    String subject = "Feedback do usuário";
+                    String messageBody = feedbackInput.getText().toString();
+                    String userEmail = usuario.getEmail();
+
+                    if (userEmail.isEmpty() || messageBody.isEmpty()) {
+                        Toast.makeText(FeedbackActivity.this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    // Enviar email
+                    boolean emailSent = EmailSender.sendEmail(FeedbackActivity.this, subject, messageBody);
+                    if (!emailSent) {
+                        Toast.makeText(FeedbackActivity.this, "Erro ao enviar o email.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    // Inserir feedback no SQL Server
+                    FeedbackService.inserirFeedback(FeedbackActivity.this, subject, messageBody);
+                    Toast.makeText(FeedbackActivity.this, "Feedback enviado com sucesso!", Toast.LENGTH_SHORT).show();
+
+                    // Redireciona para a tela de Feedback Enviado
+                    Intent intent = new Intent(FeedbackActivity.this, Feedback_enviado.class);
+                    startActivity(intent);
+                    finish(); // Fecha a atividade atual
+
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                    Toast.makeText(FeedbackActivity.this, "Erro ao obter usuário logado.", Toast.LENGTH_SHORT).show();
                 }
-
-                // Enviar email
-                boolean emailSent = EmailSender.sendEmail(userEmail, subject, messageBody);
-                if (!emailSent) {
-                    Toast.makeText(FeedbackActivity.this, "Erro ao enviar o email.", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-
-                // Inserir feedback no SQL Server
-                FeedbackService.inserirFeedback(FeedbackActivity.this, subject, messageBody);
-                Toast.makeText(FeedbackActivity.this, "Feedback enviado com sucesso!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -60,6 +76,7 @@ public class FeedbackActivity extends AppCompatActivity {
         mecanicos = findViewById(R.id.mecanicos);
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
+        sobrenos = findViewById(R.id.sobrenos);
         logout = findViewById(R.id.logout);
 
         menu.setOnClickListener(new View.OnClickListener() {
@@ -68,30 +85,42 @@ public class FeedbackActivity extends AppCompatActivity {
                 openDrawer(drawerLayout);
             }
         });
+
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 redirectActivity(FeedbackActivity.this, MenuLateral.class);
             }
         });
+
         mecanicos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 redirectActivity(FeedbackActivity.this, CatalogoMecanicos.class);
             }
         });
+
         perfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 redirectActivity(FeedbackActivity.this, PerfilActivity.class);
             }
         });
+
         feedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 recreate();
             }
         });
+
+        sobrenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(FeedbackActivity.this, SobreNos_Activity.class);
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

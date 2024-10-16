@@ -21,7 +21,7 @@ public class MenuLateral extends AppCompatActivity {
 
     DrawerLayout drawerLayout;
     ImageView menu;
-    LinearLayout home, settings, mecanicos, perfil, feedback, logout;
+    LinearLayout home, sobrenos, mecanicos, perfil, feedback, logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +51,17 @@ public class MenuLateral extends AppCompatActivity {
 
         });
 
+        CardView cardSobrenos = findViewById(R.id.cardSobrenos);
+        cardSobrenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MenuLateral.this, SobreNos_Activity.class);
+                startActivity(intent);
+
+            }
+
+        });
+
 
 
         drawerLayout = findViewById(R.id.drewerLayout);
@@ -59,6 +70,7 @@ public class MenuLateral extends AppCompatActivity {
         mecanicos = findViewById(R.id.mecanicos);
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
+        sobrenos = findViewById(R.id.sobrenos);
         logout = findViewById(R.id.logout);
 
         menu.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +105,14 @@ public class MenuLateral extends AppCompatActivity {
                 redirectActivity(MenuLateral.this, FeedbackActivity.class);
             }
         });
+
+        sobrenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                redirectActivity(MenuLateral.this, SobreNos_Activity.class);
+            }
+        });
+
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

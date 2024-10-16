@@ -17,8 +17,6 @@ import java.sql.ResultSet;
 
 public class FormLogin extends AppCompatActivity {
 
-    private EditText loginEmail, loginPassword;
-    private Button loginButton;
 
     private EditText login_nome, login_email, login_password;
     private Button login_button;
@@ -60,7 +58,7 @@ public class FormLogin extends AppCompatActivity {
                 try {
 
                     Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.2.107;"+
+                    Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://GP/SQLEXPRESS;"+
                             "databaseName=bd_sosmecanico;user=sa;password=@ITB123456;");
                     String query = "SELECT * FROM UsuarioMob WHERE nome = ? AND email = ? AND senha = ?";
                     PreparedStatement preparedStatement = connection.prepareStatement(query);
