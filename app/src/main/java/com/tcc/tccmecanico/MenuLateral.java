@@ -116,10 +116,13 @@ public class MenuLateral extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MenuLateral.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MenuLateral.this, "Logout realizado!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MenuLateral.this, FormLogin.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
-
     }
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);

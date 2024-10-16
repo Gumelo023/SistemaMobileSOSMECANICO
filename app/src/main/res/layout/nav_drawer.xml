@@ -152,11 +152,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/dark"
-            android:text="Logout"
-            android:textSize="20sp"
             android:drawableLeft="@drawable/baseline_logout_24"
-            android:drawablePadding="8dp"/>
+            android:drawablePadding="8dp"
+            android:text="Logout"
+            android:textColor="@color/dark"
+            android:textSize="20sp" />
 
     </LinearLayout>
 
