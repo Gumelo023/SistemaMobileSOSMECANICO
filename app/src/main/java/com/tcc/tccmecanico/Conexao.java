@@ -12,14 +12,14 @@ import java.sql.SQLException;
 
 public class Conexao {
 
-    public static Connection conectar(Context testeConexaoBD) {
+    public static Connection conectar(Context ctx) {
         Connection conn = null;
         try {
             StrictMode.ThreadPolicy politica;
             politica = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(politica);
             Class.forName("net.sourceforge.jtds.jdbc.Driver");
-            conn = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.56.1;" +
+            conn = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.58;" +
                     "databaseName=bd_sosmecanico;user=sa;password=@ITB123456");
 
         } catch (SQLException e){
@@ -31,21 +31,18 @@ public class Conexao {
         }
         return conn;
 
-
-
-
     }
 
-    public static UsuarioMob obterLogado(Context ctx) throws SQLException {
-        SharedPreferences sharedPreferences = ctx.getSharedPreferences("data", Context.MODE_PRIVATE);
+    public static UsuarioMob obterLogado(Context ctx) throws SQLException{
+        SharedPreferences sharedPreferences = ctx.getSharedPreferences("usuario", Context.MODE_PRIVATE);
         String email = sharedPreferences.getString("email", "");
-
+        System.out.println(email);
         try {
             PreparedStatement pst = conectar(ctx).prepareStatement("select nome, email, senha from usuarioMob where email = ?");
             pst.setString(1, email);
             ResultSet res = pst.executeQuery();
             while (res.next()) {
-                UsuarioMob usuariomob = new UsuarioMob( res.getString(1), res.getString(2), res.getString(3));
+                UsuarioMob usuariomob = new UsuarioMob(res.getString(1), res.getString(2), res.getString(3));
 
                 return usuariomob;
             }

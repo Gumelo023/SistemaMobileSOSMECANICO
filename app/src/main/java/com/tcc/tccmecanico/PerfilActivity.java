@@ -35,17 +35,18 @@ public class PerfilActivity extends AppCompatActivity {
         perfil = findViewById(R.id.perfil);
         feedback = findViewById(R.id.feedback);
         logout = findViewById(R.id.logout);
-         nomeusuario= findViewById(R.id.nomeusuario);
-        emailusuario = findViewById(R.id.emailusuario);
+
+            nomeusuario= findViewById(R.id.nomeusuario);
+            emailusuario = findViewById(R.id.emailusuario);
 
 
-        try {
-            UsuarioMob usuarioMob = Conexao.obterLogado(getBaseContext());
+            try {
+                System.out.println("conta");
+                UsuarioMob usuarioMob = Conexao.obterLogado(getBaseContext());
 
 
-            nomeusuario.setText(usuarioMob.getNome());
-            emailusuario.setText(usuarioMob.getEmail());
-
+                nomeusuario.setText(usuarioMob.getNome());
+                emailusuario.setText(usuarioMob.getEmail());
 
         }
         catch (Exception e) {
@@ -88,10 +89,13 @@ public class PerfilActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(PerfilActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(PerfilActivity.this, "Logout realizado!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(PerfilActivity.this, FormLogin.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
-
     }
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);

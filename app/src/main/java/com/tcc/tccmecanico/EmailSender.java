@@ -14,7 +14,7 @@ public class EmailSender {
                 return false;
             }
 
-            final String to = "contant@sosmecanico.com"; // Email do suporte
+            final String to = "gustavomelopereira@gmail.com"; // Email do suporte
 
             // Configurações do SMTP
             Properties props = new Properties();

@@ -12,7 +12,7 @@ public class UsuarioCrud {
 
         try {
             PreparedStatement pst = Conexao.conectar(ctx).prepareStatement(
-                    "Insert Into Usuariomob (nome, email, senha, statusUsuario) " + "values (?,?,?, 'ATIVO')");
+                    "Insert Into Usuariomob (nome, email, senha, nivelAcesso, statusUsuario) " + "values (?,?,?, 'USUARIO', 'ATIVO')");
             System.out.println(usuariomob.getNome());
             pst.setString(1, usuariomob.getNome());
             pst.setString(2,

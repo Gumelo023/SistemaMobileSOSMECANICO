@@ -112,10 +112,13 @@ public class DetailedActivity extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(DetailedActivity.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailedActivity.this, "Logout realizado!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(DetailedActivity.this, FormLogin.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
-
     }
     public static void openDrawer(DrawerLayout drawerLayout){
         drawerLayout.openDrawer(GravityCompat.START);

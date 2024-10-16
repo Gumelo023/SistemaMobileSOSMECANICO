@@ -124,12 +124,14 @@ public class CatalogoMecanicos extends AppCompatActivity {
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CatalogoMecanicos.this, "Logout", Toast.LENGTH_SHORT).show();
+                Toast.makeText(CatalogoMecanicos.this, "Logout realizado!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(CatalogoMecanicos.this, FormLogin.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
             }
         });
-
     }
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_search, menu);

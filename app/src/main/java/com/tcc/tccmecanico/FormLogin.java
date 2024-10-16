@@ -1,8 +1,11 @@
 package com.tcc.tccmecanico;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -19,24 +22,31 @@ public class FormLogin extends AppCompatActivity {
     private EditText login_nome, login_email, login_password;
     private Button login_button;
 
+    private TextView cadastro_button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_login);
 
-        login_nome = findViewById(R.id.login_nome);
+
         login_email = findViewById(R.id.login_email);
         login_password = findViewById(R.id.login_password);
         login_button = findViewById(R.id.login_button);
 
         login_button.setOnClickListener(v -> {
-            String name = login_nome.getText().toString().trim();
             String email = login_email.getText().toString().trim();
             String password = login_password.getText().toString().trim();
-            if (!name.isEmpty() && !email.isEmpty() && !password.isEmpty()) {
-                new LoginTask().execute(name, email, password);
+            if ( !email.isEmpty() && !password.isEmpty()) {
+                new LoginTask().execute( email, password);
+                SharedPreferences sharedPreferences = getSharedPreferences("usuario", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("email", email);
+                editor.apply();
+                Intent it = new Intent(this, MainActivity.class);
+                startActivity(it);
             } else {
-                Toast.makeText(FormLogin.this, "Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Por favor, preencha todos os campos.", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -44,22 +54,20 @@ public class FormLogin extends AppCompatActivity {
     private class LoginTask extends AsyncTask<String, Void, Boolean> {
         @Override
         protected Boolean doInBackground(String... params) {
-            String nome = params[0];
-            String email = params[1];
-            String senha = params[2];
+            String email = params[0];
+            String senha = params[1];
 
             // Criptografa a senha fornecida pelo usuário
             String senhaCriptografada = encryptPassword(senha);
 
             try {
                 Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://192.168.56.1;" +
+                Connection connection = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.58;" +
                         "databaseName=bd_sosmecanico;user=sa;password=@ITB123456;");
-                String query = "SELECT * FROM UsuarioMob WHERE nome = ? AND email = ? AND senha = ?";
+                String query = "SELECT * FROM UsuarioMob WHERE email = ? AND senha = ?";
                 PreparedStatement preparedStatement = connection.prepareStatement(query);
-                preparedStatement.setString(1, nome);
-                preparedStatement.setString(2, email);
-                preparedStatement.setString(3, senhaCriptografada); // Use a senha criptografada
+                preparedStatement.setString(1, email);
+                preparedStatement.setString(2, senhaCriptografada); // Use a senha criptografada
                 ResultSet resultSet = preparedStatement.executeQuery();
 
                 boolean validLogin = resultSet.next(); // Se houver resultado, login é válido
