@@ -44,13 +44,12 @@
             <TextView
                 android:id="@+id/infoText"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="316dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/retangulo_feedback"
-                android:padding="16dp"
-                android:textColor="@color/dark"
-                android:text="Qual o tempo de resposta? De 24 a 72 horas em dias úteis\n\nEntre em contato conosco pelo:\n\contant@sosmecanico.com\n\nTemos total preocupação com nossos clientes.
-                Você terá total suporte nos enviando o seu feedback." />
+                android:padding="20dp"
+                android:text="Entre em contato conosco pelo:\n\contant@sosmecanico.com\n\nQual o tempo de resposta?\n\n De 24 a 72 horas em dias úteis\n\nTemos total preocupação com nossos clientes.\n\nVocê terá total suporte nos enviando o seu feedback."
+                android:textColor="@color/dark" />
 
 
             <LinearLayout

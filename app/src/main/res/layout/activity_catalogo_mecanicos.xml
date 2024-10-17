@@ -31,7 +31,7 @@
             android:layout_height="match_parent"
             android:layout_marginTop="70dp"
             android:divider="@android:color/transparent"
-            android:dividerHeight="10.0sp"
+            android:dividerHeight="20dp"
             android:scrollbars="vertical"
             app:layout_constraintTop_toTopOf="@+id/retangulocatalogo"
             tools:listitem="@layout/activity_list_item" />

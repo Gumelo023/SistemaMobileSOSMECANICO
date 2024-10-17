@@ -45,11 +45,11 @@ public class CatalogoMecanicos extends AppCompatActivity {
 
 
 
-        int[] imageList = {R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico,R.drawable.homemmecanico, R.drawable.homemmecanico, R.drawable.homemmecanico};
-        int[] descList = {R.string.pastaIngredients, R.string.maggiIngredients,R.string.cakeIngredients,R.string.pancakeIngredients,R.string.pizzaIngredients, R.string.burgerIngredients, R.string.JoaoDesc};
-        int[] numblist = {R.string.pastaDesc, R.string.maggieDesc, R.string.cakeDesc,R.string.pancakeDesc,R.string.pizzaDesc, R.string.burgerDesc, R.string.friesDesc};
-        String[] nameList = {"Gustavo Melo", "Matheus Santos", "Fawensley Charite", "Joao Paulo", "Robson Alex","Guilherme Xavier", "Luan Santos"};
-        String[] localList= {"Barueri", "Osasco", "Carapicuiba","Jandira", "Itapevi", "Sorocaba", "Osasco"};
+        int[] imageList = {R.drawable.mecanico_cruz, R.drawable.mecanico_ed};
+        int[] descList = {R.string.pastaIngredients, R.string.maggiIngredients};
+        int[] numblist = {R.string.pastaDesc, R.string.maggieDesc};
+        String[] nameList = {"Leandro Cruz", "Ed Carlos"};
+        String[] localList= {"Barueri", "Barueri", };
 
         for (int i = 0; i < imageList.length; i++){
             listData = new ListData(nameList[i], localList[i], descList[i], numblist[i], imageList[i]);

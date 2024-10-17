@@ -6,12 +6,12 @@
     <string name="search">Pesquisar</string>
 
     //gustavo
-    <string name="pastaIngredients">Olá, meu nome é Gustavo e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
-    <string name="pastaDesc"> 11 98849-1368</string>
+    <string name="pastaIngredients"> Olá, meu nome é Leandro Cruz e sou mecânico automotivo há mais de 15 anos</string>
+    <string name="pastaDesc"> 11 988498899</string>
 
     //matheus
-    <string name="maggiIngredients">Olá, meu nome é Matheus e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
-    <string name="maggieDesc">11 44444-4444</string>
+    <string name="maggiIngredients">Olá, meu nome é Ed Carlos e sou mecânico automotivo há mais de 30 anos</string>
+    <string name="maggieDesc">11 954498239</string>
 
     //fawensley
     <string name="cakeIngredients">Olá, meu nome é Fawensley e sou mecânico automotivo há mais de 15 anos. Minha paixão por carros começou na infância, e desde então, dedico-me a diagnosticar e reparar veículos com precisão e cuidado.</string>
